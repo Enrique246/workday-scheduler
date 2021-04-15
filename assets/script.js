@@ -1,13 +1,3 @@
-// current day displayed in header using id=currentDay.
-
-// each time block is color coded to show if it is past(grey), present(red),future(green).
-
-// example: current time is red(present), if curent time is 11am everything before 11am is grey(past). else everyhing after 11am is green(future). 
-
-// when clicking on time block enter input from user.
-// save input to local storage when save button is clicked (when refreshed info is not erased).
-
-
 // get items from local storage and set them to variables
 var textareaVal9 = localStorage.getItem("hr-9");
 var textareaVal10 = localStorage.getItem("hr-10");
@@ -53,19 +43,19 @@ function time() {
     // variable "currentHour" holds current hour.
     var currentHour = moment().hours();
 
-    // function for each class block to ditermine is past, present, or future
+    // function for each class block to determine if is past, present, or future
     $(".time-block").each(function () {
 
-        // variable "hour" holds id hour from class block and pareInt is used to change it from a string to an integer.
+        // variable "hour" holds id hour from class block and parseInt is used to change it from a string to an integer.
         var hour = parseInt($(this).attr("id"));
 
-        // if statement to ditermine if in the past hour's
+        // if statement to determine if in the past hour's
         if (hour < currentHour) {
             // adds grey to blocks
             $(this).addClass("past");
         }
 
-        //else if statement to ditermine if in the present hour
+        //else if statement to determine if in the present hour
         else if (hour === currentHour) {
             // removes grey to blocks
             $(this).removeClass("past");
@@ -73,7 +63,7 @@ function time() {
             $(this).addClass("present");
         }
 
-        // else statement to ditermine if in the future's
+        // else statement to determine if is future
         else {
             // removes grey to blocks
             $(this).removeClass("past");
@@ -92,7 +82,7 @@ time();
 
 // on click function
 $(".saveBtn").on("click", function (event) {
-    // prevents refresh when saveButton is clicked
+    // prevents refresh when saveBtn is clicked
     event.preventDefault();
 
     // variable "textarea" holds the previous sibling of saveBtn which is (textarea).
