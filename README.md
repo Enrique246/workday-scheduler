@@ -6,7 +6,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - What was your motivation?
   - Learn how to use moment and its funcionality
   - Become more confortable with JQuery
-- Why did you build this project? 
+- Why did you build this project?  
   - To build a project that is the vivid example of a real work request I would get in a real job.
 - What problem does it solve?
 ```md
